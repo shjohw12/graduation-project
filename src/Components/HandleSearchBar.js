@@ -1,35 +1,26 @@
 import React from "react";
 
 class HandleSearchBar extends React.Component {
-    state= {
-        search:null,
+    state = {
+        search: null,
     };
-    handleChange = (e)=>{
+    handleChange = (e) => {
         this.setState({
-            search:e.target.value
+            search: e.target.value
         });
     };
-    handleSubmit = (e)=>{
+    handleSearch = (e) => {
         e.preventDefault();
         this.props.addSearch(this.state.search)
-
     };
     render() {
-            // return (
-            //     <form className="row container input-field orange darken-1 z-depth-2" onSubmit={this.handleSubmit} style={{paddingBottom:20,borderRadius:"30px 15px"}}>
-            //         <div className="col center s10 push-s1 white" style={{border:"2px solid white",marginTop:20,borderRadius:"10px",opacity:.7}} >
-            //             <input type="text" placeholder="Codeforces User Handle" onChange={this.handleChange}/>
-            //         </div>
-            //     </form>
-            // )
-
-            return (
-                <form>
-                    <div>
-                        <input/>
-                    </div>
-                </form>
-            );
+        return (
+            <form>
+                <div>
+                    <input />
+                </div>
+            </form>
+        );
     }
 }
 export default HandleSearchBar;

@@ -36,15 +36,17 @@ class App extends React.Component {
   //   //   "-50%", "-50%"
   //   // ],
   // };
-  
+
 
   render() {
     return (
-        <div class="search-box">
-          <form>
-            <input type="text" placeholder="Enter Codeforces Handle"/>
-          </form>
-        </div>
+      <div class="search-box">
+        <form>
+          <input class="search-txt" type="text" placeholder="Enter Codeforces Handle" />
+
+          <button class="search-btn" type="submit">검색</button>
+        </form>
+      </div>
     );
   }
 
