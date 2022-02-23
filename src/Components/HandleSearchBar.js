@@ -15,11 +15,12 @@ class HandleSearchBar extends React.Component {
     };
     render() {
         return (
-            <form>
-                <div>
-                    <input />
-                </div>
-            </form>
+            <div class="search-box">
+                <form>
+                    <input class="search-txt" type="text" placeholder="Enter Codeforces Handle" />
+                    <button class="search-btn" type="submit">search</button>
+                </form>
+            </div>
         );
     }
 }
