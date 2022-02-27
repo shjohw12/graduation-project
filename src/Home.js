@@ -7,7 +7,7 @@ class Home extends React.Component {
         userHandle: "",
         userStatusData: [],
         userRatingData: [],
-    }
+    };
 
     getUserData = (userHandle) => {
         const base = "https://codeforces.com/api/user.status?handle=";
@@ -45,8 +45,7 @@ class Home extends React.Component {
                     console.log(this.state.error);
                 }
             );
-    }
-
+    };
 
     render() {
         return (
