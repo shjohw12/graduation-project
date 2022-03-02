@@ -50,7 +50,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <HandleSearchBar />
+                <HandleSearchBar getUserData={this.getUserData} />
             </div>
         );
     };

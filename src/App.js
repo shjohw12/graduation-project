@@ -1,29 +1,21 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import NavBar from './Components/NavBar';
 import Home from "./Home";
-import './App.css';
+import './style.css';
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
         <div>
+          <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
         </div>
       </BrowserRouter>
     )
-
-
-    // return (
-    //   <div class="search-box">
-    //     <form>
-    //       <input class="search-txt" type="text" placeholder="Enter Codeforces Handle" />
-    //       <button class="search-btn" type="submit">search</button>
-    //     </form>
-    //   </div>
-    // );
   }
 };
 
