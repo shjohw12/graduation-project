@@ -38,11 +38,21 @@
   color: white;
   font-size: 15px;
   line-height: 40px;
-  /* width: 200px; */
   width: 0;
   transition: 0.5s;
 }
 
+.nav-wrapper {
+  position: relative;
+  background-color: grey;
+  height: 100px;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
 /* .App {
   text-align: center;

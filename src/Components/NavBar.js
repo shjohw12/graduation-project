@@ -11,13 +11,16 @@ class NavBar extends React.Component {
                 <nav>
                     <div className="nav-wrapper">
                         <span>foo</span>
+
+                        <ul className="nav-menu">
+                            <li><Link to="/">home</Link></li>
+                            <li><Link to="/stat">stat</Link></li>
+                        </ul>
                     </div>
                 </nav>
 
 
-                <ul>
 
-                </ul>
             </div>
         );
     };
