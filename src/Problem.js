@@ -1,12 +1,11 @@
-import React from 'react';
-import HandleSearchBar from './Components/HandleSearchBar';
+import React from "react";
 import Axios from "axios";
+import HandleSearchBar from "./Components/HandleSearchBar";
 
-class Home extends React.Component {
+class Problem extends React.Component {
     state = {
         userHandle: "",
         userStatusData: [],
-        userRatingData: [],
     };
 
     getUserData = (userHandle) => {
@@ -28,32 +27,22 @@ class Home extends React.Component {
                     console.log(this.state.error);
                 }
             );
-
-        Axios.get(base + "user.rating?handle=" + userHandle)
-            .then(
-                (res) => {
-                    this.setState({
-                        userRatingData: res.data.result
-                    })
-                }
-            )
-            .catch(
-                (error) => {
-                    this.setState({
-                        error: true,
-                    })
-                    console.log(this.state.error);
-                }
-            );
     };
 
     render() {
+
+        for (let i = 0; i < this.state.userStatusData.length; i++) {
+
+        }
+
         return (
             <div>
                 <HandleSearchBar getUserData={this.getUserData} />
             </div>
         );
     };
-};
 
-export default Home;
+
+}
+
+export default Problem;
