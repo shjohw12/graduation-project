@@ -23,12 +23,21 @@ class VerdictChart extends React.Component {
             "IDLENESS_LIMIT_EXCEEDED": 0,
         }
 
-        for (let i = 0; i < this.props.data.length; i++) {
-            verdictObj[this.props.data[i].verdict]++;
-        }
+        const len = this.props.userStatusData.length;
+
+        console.log(this.props.userStatusData[0]);
+
+        // for (let i = 0; i < len; i++) {
+        //     verdictObj[this.props.data[i].verdict]++;
+        // }
+
+        return (
+            <div>
+
+            </div>
+        );
 
     }
-
-
-
 }
+
+export default VerdictChart;

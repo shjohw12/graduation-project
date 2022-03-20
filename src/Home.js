@@ -1,6 +1,7 @@
 import React from 'react';
 import HandleSearchBar from './Components/HandleSearchBar';
 import Axios from "axios";
+import VerdictChart from './Components/Charts/VerdictChart';
 
 class Home extends React.Component {
     state = {
@@ -60,7 +61,7 @@ class Home extends React.Component {
                     </div>
                 }
                 <div>
-                    <VerdictChart />
+                    <VerdictChart userStatusData={this.state.userStatusData} userRatingData={this.state.userRatingData} />
                 </div>
 
 
