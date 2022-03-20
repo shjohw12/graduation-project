@@ -7,6 +7,7 @@ class Home extends React.Component {
         userHandle: "",
         userStatusData: [],
         userRatingData: [],
+        isError: false,
     };
 
     getUserData = (userHandle) => {
@@ -23,9 +24,9 @@ class Home extends React.Component {
             .catch(
                 (error) => {
                     this.setState({
-                        error: true,
-                    })
-                    console.log(this.state.error);
+                        isError: true,
+                    });
+                    console.log(error);
                 }
             );
 
@@ -40,9 +41,9 @@ class Home extends React.Component {
             .catch(
                 (error) => {
                     this.setState({
-                        error: true,
-                    })
-                    console.log(this.state.error);
+                        isError: true,
+                    });
+                    console.log(error);
                 }
             );
     };
@@ -51,7 +52,22 @@ class Home extends React.Component {
         return (
             <div>
                 <HandleSearchBar getUserData={this.getUserData} />
+                {
+                    // Conditional Rendering
+                    this.state.isError &&
+                    <div>
+                        <p>Invalid Username or Network Problem</p>
+                    </div>
+                }
+                <div>
+                    <VerdictChart />
+                </div>
+
+
             </div>
+
+
+
         );
     };
 };

@@ -30,6 +30,8 @@ class Problem extends React.Component {
     };
 
     render() {
+        console.log(this.state.data.length);
+        console.log(this.state.data[0]);
 
         for (let i = 0; i < this.state.userStatusData.length; i++) {
 
