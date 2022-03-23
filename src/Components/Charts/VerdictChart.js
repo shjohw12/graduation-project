@@ -24,16 +24,55 @@ class VerdictChart extends React.Component {
         }
 
         const len = this.props.userStatusData.length;
-
         console.log(this.props.userStatusData[0]);
 
-        // for (let i = 0; i < len; i++) {
-        //     verdictObj[this.props.data[i].verdict]++;
-        // }
+        const slices = [
+            { color: '#4CAF50' },
+            { color: '#f44336' },
+            { color: '#2196F3' },
+            { color: '#673AB7' },
+            { color: '#E91E63' },
+        ];
+
+        for (let i = 0; i < len; i++) {
+            verdictObj[this.props.data[i].verdict]++;
+        }
 
         return (
             <div>
+                <Chart
+                    width={'100%'}
+                    height={'400px'}
+                    chartType="PieChart"
 
+                    data={[
+                        ['Task', 'Stats'],
+                        ['WA', verdictObj.WRONG_ANSWER],
+                        ['TLE', verdictObj.TIME_LIMIT_EXCEEDED],
+                        ['MLE', verdictObj.MEMORY_LIMIT_EXCEEDED],
+                        ['AC', verdictObj.OK],
+                        ['RE', verdictObj.RUNTIME_ERROR],
+                    ]}
+
+                    options={{
+                        slices: slices,
+                        fontName: 'Roboto',
+                        chartArea: {
+                            width: '100%',
+                            height: '350',
+                        },
+                        title: 'Verdict of the ',
+                        titleTextStyle: {
+                            fontSize: 18,
+                            color: '#393939',
+                            bold: false
+                        },
+                        legend: 'none',
+                        pieSliceText: 'label',
+                        is3D: true,
+                    }}
+                    rootProps={{ 'data-testid': '2' }}
+                />
             </div>
         );
 
