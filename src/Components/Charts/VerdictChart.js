@@ -35,11 +35,11 @@ class VerdictChart extends React.Component {
         ];
 
         for (let i = 0; i < len; i++) {
-            verdictObj[this.props.data[i].verdict]++;
+            verdictObj[this.props.userStatusData[i].verdict]++;
         }
 
         return (
-            <div>
+            <div className="verdict-chart">
                 <Chart
                     width={'100%'}
                     height={'400px'}
