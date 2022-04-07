@@ -3,6 +3,7 @@ import HandleSearchBar from './Components/HandleSearchBar';
 import Axios from "axios";
 import VerdictChart from './Components/Charts/VerdictChart';
 import LanguageChart from './Components/Charts/LanguageChart';
+import TagChart from './Components/Charts/TagChart';
 
 class Home extends React.Component {
     state = {
