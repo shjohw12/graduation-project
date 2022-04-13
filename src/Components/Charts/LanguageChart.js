@@ -16,7 +16,7 @@ class LanguageChart extends React.Component {
         }
 
         const data = [
-            ['Task', 'Stats'],
+            ['Language', 'Stats'],
         ]
 
         const slices = [

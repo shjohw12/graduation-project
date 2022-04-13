@@ -24,7 +24,6 @@ class VerdictChart extends React.Component {
         }
 
         const len = this.props.userStatusData.length;
-        console.log(this.props.userStatusData[0]);
 
         const slices = [
             { color: '#4CAF50' },
@@ -46,7 +45,7 @@ class VerdictChart extends React.Component {
                     chartType="PieChart"
 
                     data={[
-                        ['Task', 'Stats'],
+                        ['Verdict', 'Stats'],
                         ['WA', verdictObj.WRONG_ANSWER],
                         ['TLE', verdictObj.TIME_LIMIT_EXCEEDED],
                         ['MLE', verdictObj.MEMORY_LIMIT_EXCEEDED],

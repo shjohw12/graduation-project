@@ -70,6 +70,10 @@ class Home extends React.Component {
                     <LanguageChart userStatusData={this.state.userStatusData} userRatingData={this.state.userRatingData} />
                 </div>
 
+                <div>
+                    <TagChart userStatusData={this.state.userStatusData} userHandle={this.state.userHandle} />
+                </div>
+
 
             </div>
 
