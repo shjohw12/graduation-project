@@ -48,34 +48,38 @@ class LanguageChart extends React.Component {
             data.push([elem, langObj[elem]]);
         }
 
+        const title = 'Languages of' + this.props.userHandle;
+
         return (
             <div>
-                <Chart
-                    width={'100%'}
-                    height={'400px'}
-                    className="lang-chart"
-                    chartType="PieChart"
-                    // style={{paddingTop:20}}
-                    data={data}
-                    options={{
-                        chartArea: {
-                            width: '100%',
-                            height: '350',
-                        },
-                        fontName: 'Roboto',
-                        title: 'Languages of the ' + 'hi',
-                        legend: 'none',
-                        pieSliceText: 'label',
-                        titleTextStyle: {
-                            fontSize: 18,
-                            color: '#393939',
-                            bold: false
-                        },
-                        slices: slices,
-                        is3D: true,
-                    }}
-                    rootProps={{ 'data-testid': '3' }}
-                />
+                {len > 0 &&
+                    <Chart
+                        width={'100%'}
+                        height={'400px'}
+                        className="lang-chart"
+                        chartType="PieChart"
+                        // style={{paddingTop:20}}
+                        data={data}
+                        options={{
+                            chartArea: {
+                                width: '100%',
+                                height: '350',
+                            },
+                            fontName: 'Roboto',
+                            title: title,
+                            legend: 'none',
+                            pieSliceText: 'label',
+                            titleTextStyle: {
+                                fontSize: 18,
+                                color: '#393939',
+                                bold: false
+                            },
+                            slices: slices,
+                            is3D: true,
+                        }}
+                        rootProps={{ 'data-testid': '3' }}
+                    />
+                }
             </div>
         )
     }

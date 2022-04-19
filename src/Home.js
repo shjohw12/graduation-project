@@ -63,11 +63,11 @@ class Home extends React.Component {
                     </div>
                 }
                 <div>
-                    <VerdictChart userStatusData={this.state.userStatusData} userRatingData={this.state.userRatingData} />
+                    <VerdictChart userStatusData={this.state.userStatusData} userRatingData={this.state.userRatingData} userHandle={this.state.userHandle} />
                 </div>
 
                 <div>
-                    <LanguageChart userStatusData={this.state.userStatusData} userRatingData={this.state.userRatingData} />
+                    <LanguageChart userStatusData={this.state.userStatusData} userRatingData={this.state.userRatingData} userHandle={this.state.userHandle} />
                 </div>
 
                 <div>

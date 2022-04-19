@@ -37,41 +37,46 @@ class VerdictChart extends React.Component {
             verdictObj[this.props.userStatusData[i].verdict]++;
         }
 
+        const title = 'Verdict of ' + this.props.userHandle;
+
         return (
             <div className="verdict-chart">
-                <Chart
-                    width={'100%'}
-                    height={'400px'}
-                    chartType="PieChart"
+                {len > 0 &&
+                    <Chart
+                        width={'100%'}
+                        height={'400px'}
+                        chartType="PieChart"
 
-                    data={[
-                        ['Verdict', 'Stats'],
-                        ['WA', verdictObj.WRONG_ANSWER],
-                        ['TLE', verdictObj.TIME_LIMIT_EXCEEDED],
-                        ['MLE', verdictObj.MEMORY_LIMIT_EXCEEDED],
-                        ['AC', verdictObj.OK],
-                        ['RE', verdictObj.RUNTIME_ERROR],
-                    ]}
+                        data={[
+                            ['Verdict', 'Stats'],
+                            ['WA', verdictObj.WRONG_ANSWER],
+                            ['TLE', verdictObj.TIME_LIMIT_EXCEEDED],
+                            ['MLE', verdictObj.MEMORY_LIMIT_EXCEEDED],
+                            ['AC', verdictObj.OK],
+                            ['RE', verdictObj.RUNTIME_ERROR],
+                        ]}
 
-                    options={{
-                        slices: slices,
-                        fontName: 'Roboto',
-                        chartArea: {
-                            width: '100%',
-                            height: '350',
-                        },
-                        title: 'Verdict of the ',
-                        titleTextStyle: {
-                            fontSize: 18,
-                            color: '#393939',
-                            bold: false
-                        },
-                        legend: 'none',
-                        pieSliceText: 'label',
-                        is3D: true,
-                    }}
-                    rootProps={{ 'data-testid': '2' }}
-                />
+                        options={{
+                            slices: slices,
+                            fontName: 'Roboto',
+                            chartArea: {
+                                width: '100%',
+                                height: '350',
+                            },
+                            title: title,
+                            titleTextStyle: {
+                                fontSize: 18,
+                                color: '#393939',
+                                bold: false
+                            },
+                            legend: 'none',
+                            pieSliceText: 'label',
+                            is3D: true,
+                        }}
+                        rootProps={{ 'data-testid': '2' }}
+                    />
+                }
+
             </div>
         );
 
