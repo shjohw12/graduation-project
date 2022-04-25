@@ -10,7 +10,7 @@ class NavBar extends React.Component {
             <div>
                 <nav>
                     <div className="nav-wrapper">
-                        <span>foo</span>
+                        <span>Competitive Programming Statistics Visualization</span>
                         <ul className="nav-menu">
                             <li><Link to="/">home</Link></li>
                             <li><Link to="/stat">stat</Link></li>

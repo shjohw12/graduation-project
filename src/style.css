@@ -1,6 +1,6 @@
 .search-box {
   position: absolute;
-  top: 50%;
+  top: 7%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #949BA0;
@@ -55,7 +55,10 @@
   right: 0;
 }
 
-.verdict-chart {}
+/* .verdict-chart {
+  position: absolute;
+  top: 100px;
+} */
 
 /* .App {
   text-align: center;
