@@ -45,7 +45,7 @@
 
 .nav-wrapper {
   position: relative;
-  background-color: grey;
+  background-color: rgb(84, 192, 112);
   height: 100px;
 }
 
@@ -53,6 +53,11 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.nav-title {
+  font-size: 25px;
+  top: 10%;
 }
 
 /* .verdict-chart {
