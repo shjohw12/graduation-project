@@ -64,7 +64,7 @@ class ProblemLevelChart extends React.Component {
                             bar: { groupWidth: '95%' },
                             legend: { position: 'none' },
                             fontName: 'Roboto',
-                            titleTextStyle: titleTextStyle,
+                            titleTextStyle: style,
                             vAxis: { format: '0' },
 
                         }}
