@@ -74,6 +74,6 @@ class ProblemLevelChart extends React.Component {
             </div>
         )
     }
-
-
 };
+
+export default ProblemLevelChart;

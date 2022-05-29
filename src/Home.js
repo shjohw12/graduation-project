@@ -4,6 +4,7 @@ import Axios from "axios";
 import VerdictChart from './Components/Charts/VerdictChart';
 import LanguageChart from './Components/Charts/LanguageChart';
 import TagChart from './Components/Charts/TagChart';
+import ProblemLevelChart from './Components/Charts/ProblemLevelChart';
 
 class Home extends React.Component {
     state = {
@@ -74,6 +75,9 @@ class Home extends React.Component {
                     <TagChart userStatusData={this.state.userStatusData} userHandle={this.state.userHandle} />
                 </div>
 
+                <div >
+                    <ProblemLevelChart userStatusData={this.state.userStatusData} userHandle={this.state.userHandle} />
+                </div>
 
             </div>
 
