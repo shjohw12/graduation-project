@@ -56,7 +56,7 @@ class TagChart extends React.Component {
             '#b71c1c',
         ]
 
-        const title = 'Tag of ' + this.props.userHandle;
+        const title = 'Tag chart of ' + this.props.userHandle;
 
         return (
             <div>

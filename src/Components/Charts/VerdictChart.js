@@ -37,7 +37,7 @@ class VerdictChart extends React.Component {
             verdictObj[this.props.userStatusData[i].verdict]++;
         }
 
-        const title = 'Verdict of ' + this.props.userHandle;
+        const title = 'Verdict chart of ' + this.props.userHandle;
 
         return (
             <div className="verdict-chart">

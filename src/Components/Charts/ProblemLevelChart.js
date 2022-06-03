@@ -40,7 +40,7 @@ class ProblemLevelChart extends React.Component {
             data.push(sortedData[i]);
         }
 
-        const title = "Problem Level Chart of " + this.props.userHandle;
+        const title = "Problem level chart of " + this.props.userHandle;
 
         return (
             <div>

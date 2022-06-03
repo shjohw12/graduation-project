@@ -48,7 +48,7 @@ class LanguageChart extends React.Component {
             data.push([elem, langObj[elem]]);
         }
 
-        const title = 'Languages of ' + this.props.userHandle;
+        const title = 'Languages chart of ' + this.props.userHandle;
 
         return (
             <div>
