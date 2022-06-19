@@ -79,6 +79,11 @@ class Home extends React.Component {
                     <ProblemLevelChart userStatusData={this.state.userStatusData} userHandle={this.state.userHandle} />
                 </div>
 
+                <div >
+                    <ProblemRatingChart userStatusData={this.state.userStatusData} userHandle={this.state.userHandle} />
+                </div>
+
+
             </div>
 
 
