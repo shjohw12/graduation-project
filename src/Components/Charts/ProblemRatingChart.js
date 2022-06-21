@@ -47,7 +47,7 @@ class ProblemRatingChart extends React.Component {
             bold: false,
         };
 
-        const title = 'Problem rating chart of ' + this.props.userHandle,
+        const title = 'Problem rating chart of ' + this.props.userHandle;
 
         return (
             <div>
