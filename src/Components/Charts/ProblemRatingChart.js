@@ -47,6 +47,8 @@ class ProblemRatingChart extends React.Component {
             bold: false,
         };
 
+        const title = 'Problem rating chart of ' + this.props.userHandle,
+
         return (
             <div>
                 {len > 0 &&
@@ -63,7 +65,7 @@ class ProblemRatingChart extends React.Component {
                                 height: '350',
                             },
                             chart: {
-                                title: 'Problem ratings of ' + this.props.userHandle,
+                                title: title,
                                 legend: "none",
                             },
                             bar: { groupWidth: '95%' },
@@ -79,3 +81,5 @@ class ProblemRatingChart extends React.Component {
     }
 
 };
+
+export default ProblemRatingChart;

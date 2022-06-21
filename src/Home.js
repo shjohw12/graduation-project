@@ -5,6 +5,7 @@ import VerdictChart from './Components/Charts/VerdictChart';
 import LanguageChart from './Components/Charts/LanguageChart';
 import TagChart from './Components/Charts/TagChart';
 import ProblemLevelChart from './Components/Charts/ProblemLevelChart';
+import ProblemRatingChart from './Components/Charts/ProblemRatingChart';
 
 class Home extends React.Component {
     state = {
