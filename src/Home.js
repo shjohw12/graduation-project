@@ -6,6 +6,7 @@ import LanguageChart from './Components/Charts/LanguageChart';
 import TagChart from './Components/Charts/TagChart';
 import ProblemLevelChart from './Components/Charts/ProblemLevelChart';
 import ProblemRatingChart from './Components/Charts/ProblemRatingChart';
+import ContestChart from './Components/Charts/ContestChart';
 
 class Home extends React.Component {
     state = {
@@ -84,6 +85,9 @@ class Home extends React.Component {
                     <ProblemRatingChart userStatusData={this.state.userStatusData} userHandle={this.state.userHandle} />
                 </div>
 
+                <div >
+                    <ContestChart user={this.state.userHandle} user_data={this.state.userRatingData} data={this.state.userStatusData} />
+                </div>
 
             </div>
 
