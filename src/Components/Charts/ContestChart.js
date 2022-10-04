@@ -3,7 +3,6 @@ import React from "react";
 class ContestChart extends React.Component {
 
     render() {
-        //contest
         let best = 1e10;
         let worst = -1e10;
         let maxUp = 0;
@@ -14,8 +13,8 @@ class ContestChart extends React.Component {
         let maxDownCon = '';
         let tot = this.props.user_data.length;
         let con_url = 'https://codeforces.com/contest/';
+
         this.props.user_data.forEach(function (con) {
-            // con is a contest
             if (con.rank < best) {
                 best = con.rank;
                 bestCon = con.contestId;
@@ -25,29 +24,28 @@ class ContestChart extends React.Component {
                 worstCon = con.contestId;
             }
             let ch = con.newRating - con.oldRating;
-            if (ch > maxUp) {
-                maxUp = ch;
-                maxUpCon = con.contestId;
+            if (ch < 500) {
+                if (ch > maxUp) {
+                    maxUp = ch;
+                    maxUpCon = con.contestId;
+                }
+                if (ch < maxDown) {
+                    maxDown = ch;
+                    maxDownCon = con.contestId;
+                }
             }
-            if (ch < maxDown) {
-                maxDown = ch;
-                maxDownCon = con.contestId;
-            }
+
         });
-        // console.log(maxDownCon)
-        //problems
         const problems = {};
         for (let i = this.props.data.length - 1; i >= 0; i--) {
             let sub = this.props.data[i];
             let problemId = sub.problem.contestId + '-' + sub.problem.index;
             if (problems[problemId] === undefined) {
-                // first submission of a problem
                 problems[problemId] = {
                     attempts: 1,
-                    solved: 0 // We also want to save how many submission got AC, a better name would have been number_of_ac
+                    solved: 0,
                 };
             } else {
-                //we want to show how many time a problem was attempted by a user before getting first AC
                 if (problems[problemId].solved === 0) problems[problemId].attempts++;
             }
 
