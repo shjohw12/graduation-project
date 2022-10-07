@@ -128,12 +128,6 @@ class ContestChart extends React.Component {
                         </div>
                         <div className="col collection s12 m6 l6 z-depth-2" style={{ borderRadius: "10px" }}>
                             <table >
-                                <thead>
-                                    <tr>
-                                        <th>Some numbers about</th>
-                                        <th className="right">{this.props.user}</th>
-                                    </tr>
-                                </thead>
                                 <tbody>
                                     <tr className="hoverable" style={{ borderRadius: "10px" }}>
                                         <td>Tried</td>
