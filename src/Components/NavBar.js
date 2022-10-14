@@ -16,8 +16,8 @@ class NavBar extends React.Component {
                         <br />
                         <span className="nav-title">& Problem Recommendation</span>
                         <ul className="nav-menu">
-                            <li><Link to="/">home</Link></li>
-                            <li><Link to="/stat">stat</Link></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/problem">Problem Recommendation</Link></li>
                         </ul>
                     </div>
                 </nav>
