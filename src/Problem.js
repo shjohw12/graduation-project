@@ -9,11 +9,11 @@ class Problem extends React.Component {
         data: [],
         error: false,
     };
+
     addSearch = (search) => {
         const url = "https://codeforces.com/api/user.status?handle=" + search;
         Axios.get(url)
             .then(res => {
-                // console.log(res.data.result)
                 this.setState({
                     data: res.data.result,
                     search: search
@@ -44,7 +44,10 @@ class Problem extends React.Component {
         for (var x in problems) {
             p.push([parseInt(problems[x]), x]);
         }
+
+
         p.sort(sortFunction);
+        p.sort(() => Math.random() - 0.5);
 
         function sortFunction(a, b) {
             if (a[0] === b[0]) {
@@ -65,7 +68,7 @@ class Problem extends React.Component {
 
         return (
             <div>
-                <HandleSearchBar addSearch={this.addSearch} />
+                <HandleSearchBar getUserData={this.addSearch} />
                 {this.state.error &&
                     <div>
                         <p className="center">Couldn't find user. Network problem?</p>
@@ -88,4 +91,4 @@ class Problem extends React.Component {
 }
 
 
-export default Problems
+export default Problem;

@@ -36,4 +36,4 @@ class ProblemRecommendation extends React.Component {
     }
 
 }
-export default ProblemRecommendation
+export default ProblemRecommendation;
